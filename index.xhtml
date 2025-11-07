@@ -1,102 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+  <meta http-equiv="Content-Type"
+        content="application/xhtml+xml; charset=UTF-8" />
+  <title>Reservation Hotel Room</title>
 
- <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
-    <title>Reservation Hotel Room</title>
+  <!-- CSS di dalam folder css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Flatpickr -->
+  <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
- </head>
- 
- <body>
-    <h1>Reservation Hotel Room</h1>
-    <form action="">
-        <fieldset >
-            <legend>Personal Data</legend>
-            <ol>
-                <li><label for="name">Name</label></li>
-                <input class="text" type="text" id="name" name="name" />
-                
-                <li><label for="gender">Gender</label></li>
-                <input class="text" type="text" id="gender" name="gender" />
-                
-                <li><label for="email">Email Address</label></li>
-                <input class="text" type="text" id="email" name="email" />
-                
-                <li><label for="telp">Telp Number</label></li>
-                <input class="text" type="text" id="telp" name="telp" />
-            </ol>
-        </fieldset>
+<body>
+  <h1>Reservation Hotel Room</h1>
 
-    <p>Reservation Room form</p>
-    <ol>
-      <li><label for="resname">Reservation Name</label></li>
-      <input class="text" type="text" id="resname" name="resname" />
+  <form action="" method="post">
+    <!-- PERSONAL DATA -->
+    <fieldset>
+      <legend>Personal Data</legend>
+      <ol>
+        <li>
+          <label for="name">Name</label>
+          <input class="text" type="text" id="name" name="name" />
+        </li>
 
-      <li><label for="bookdate">Booking date</label></li>
-      <input class="text" type="text" id="bookdate" name="bookdate" />
+        <li>
+          <label for="gender">Gender</label>
+          <input class="text" type="text" id="gender" name="gender" />
+        </li>
 
-      <li><label for="roomtype">Room Type</label></li>
-      <select id="roomtype" name="roomtype">
-        <option>Deluxe</option>
-        <option>Superior</option>
-        <option>Suite</option>
-      </select>
+        <li>
+          <label for="email">Email Address</label>
+          <input class="text" type="text" id="email" name="email" />
+        </li>
 
-      <li><label for="bedtype">Bed Type</label></li>
-      <select id="bedtype" name="bedtype">
-        <option>Single bed</option>
-        <option>Double bed</option>
-        <option>Twin bed</option>
-      </select>
+        <li>
+          <label for="telp">Telp Number</label>
+          <input class="text" type="text" id="telp" name="telp" />
+        </li>
+      </ol>
+    </fieldset>
 
-      <li>Breakfast</li>
-      <input type="radio" name="breakfast" value="with" checked="checked" /> With Breakfast
-      <input type="radio" name="breakfast" value="without"/> Whitout Breakfast
-    </ol>
+    <!-- RESERVATION ROOM -->
+    <fieldset>
+      <legend>Reservation Room Form</legend>
+      <ol>
+        <li>
+          <label for="resname">Reservation Name</label>
+          <input class="text" type="text" id="resname" name="resname" />
+        </li>
 
-     <fieldset >
+        <li>
+          <label for="bookdate">Booking Date</label>
+          <input class="text" type="text" id="bookdate" name="bookdate" />
+        </li>
+
+        <li>
+          <label for="roomtype">Room Type</label>
+          <select id="roomtype" name="roomtype">
+            <option>Deluxe</option>
+            <option>Superior</option>
+            <option>Suite</option>
+          </select>
+        </li>
+
+        <li>
+          <label for="bedtype">Bed Type</label>
+          <select id="bedtype" name="bedtype">
+            <option>Single bed</option>
+            <option>Double bed</option>
+            <option>Twin bed</option>
+          </select>
+        </li>
+
+        <li>
+          <span>Breakfast</span><br />
+          <input type="radio" id="bf-with" name="breakfast" value="with"
+                 checked="checked" />
+          <label for="bf-with">With Breakfast</label>
+
+          <input type="radio" id="bf-without" name="breakfast" value="without" />
+          <label for="bf-without">Without Breakfast</label>
+        </li>
+      </ol>
+    </fieldset>
+
+    <!-- PAYMENT -->
+    <fieldset>
       <legend>Payment</legend>
       <ol>
-        <li><label for="checkin">Check in date</label></li>
-        <input class="text" type="text" id="checkin" name="checkin" />
+        <li>
+          <label for="checkin">Check In Date</label>
+          <input class="text" type="text" id="checkin" name="checkin" />
+        </li>
 
-        <li><label for="checkout">Check out date</label></li>
-        <input class="text" type="text" id="checkout" name="checkout" />
+        <li>
+          <label for="checkout">Check Out Date</label>
+          <input class="text" type="text" id="checkout" name="checkout" />
+        </li>
 
-        <li><label for="payment">Payment Method</label></li>
-        <select id="payment" name="payment">
-          <option>cash</option>
-          <option>credit card</option>
-          <option>debit</option>
-        </select>
+        <li>
+          <label for="payment">Payment Method</label>
+          <select id="payment" name="payment">
+            <option>Cash</option>
+            <option>Credit Card</option>
+            <option>Debit</option>
+          </select>
+        </li>
       </ol>
     </fieldset>
 
     <p>
-      <input type="submit" value="submit" />
+      <input type="submit" value="Submit" />
     </p>
-        
-    </form>
+  </form>
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-          var opts = {
-            dateFormat: "Y-m-d",      
-            altInput: true,           
-            altFormat: "d M Y",       
-            allowInput: true
-          };
-          flatpickr("#bookdate",  opts);
-          flatpickr("#checkin",   opts);
-          flatpickr("#checkout",  opts);
-        });
-      
-    </script>
-  </body>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      var opts = {
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "d M Y",
+        allowInput: true
+      };
+      flatpickr("#bookdate", opts);
+      flatpickr("#checkin", opts);
+      flatpickr("#checkout", opts);
+    });
+  </script>
+</body>
 </html>
